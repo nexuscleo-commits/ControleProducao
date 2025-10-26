@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang = "pt-br">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css">
+		<title>Produção CNC</title>
+	</head>
+
+	<body>
+		<div class="container-dados">
+			<div class="cabecalho">
+				<h2>PRODUÇÃO USINAGEM CNC</h2>
+			</div>
+			
+			<div class="form-fields"> <!-- Novo container para os campos -->
+				<div class="campo-dado">
+					<label for="data">Data</label>
+					<input type="date" id="data" name="data">
+				</div>
+				
+				<div class="campo-dado">
+					<label for="operador">Operador</label>
+					<input type="text" id="operador" name="operador">
+				</div>
+				
+				<div class="campo-dado">
+					<label for="peca">Peça</label>
+					<input type="text" id="peca" name="peca">
+				</div>
+				
+				<div class="campo-dado">
+					<label for="operacao">Operação</label>
+					<input type="text" id="operacao" name="operacao">
+				</div>
+				
+				<div class="campo-dado">
+					<label for="quantidade">Qtd Produzida</label>
+					<input type="number" id="quantidade" name="quantidade">
+				</div>
+				
+				<div class="campo-dado">
+					<label for="descartadas">Qtd Sucata</label>
+					<input type="number" id="descartadas" name="descartadas">
+				</div>
+				
+				<div class="campo-dado">
+					<label for="maquina">N° da Máquina</label>
+					<input type="number" id="maquina" name="maquina">
+				</div>
+			</div>
+			<div class="container-botoes-index">
+				<button type="submit" class="botao-salvar">Salvar</button>
+				<button type="button" class="botao-visualizar">Resumo</button>
+			</div>
+		</div>
+		
+		<script type="module" src="script.js"></script>
+		
+		<footer>
+			&copy; NexusCleo 2025
+		</footer>
+	</body>
+</html> 

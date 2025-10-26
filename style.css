@@ -1,0 +1,252 @@
+:root {
+	--cor-fundo: #333;
+	--cor-destaque: #00ffff;
+	--cor-texto-principal: #fff;
+	--cor-excluir: #c0392b;
+	--cor-sombra: rgba(0, 0, 0, 1);
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: var(--cor-fundo);
+	display: flex;
+	flex-direction: column; /* Empilha os itens verticalmente */
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	margin: 0;
+	text-shadow:  0 5px 5px var(--cor-sombra);
+}
+
+.container-resumo,
+.container-analise {
+	background-color: var(--cor-fundo);
+	color: var(--cor-destaque);
+	padding: 20px;
+	margin: 10px;
+	border-radius: 15px;
+	border: 1px solid var(--cor-destaque);
+	box-shadow: 0 10px 20px var(--cor-sombra);
+	display: flex;
+	flex-direction: column;
+	width: 1400px; /* Largura padrão */
+	max-width: 95vw; /* Garante que não exceda a largura da tela */
+	max-height: 600px; /* Garante que não exceda a altura da tela, com margem */
+}
+
+/* --- Estilo Específico para o Container de Dados (Formulário) --- */
+.container-dados {
+	background-color: var(--cor-fundo);
+	color: var(--cor-destaque);
+	padding: 20px;
+	margin: 10px;
+	border-radius: 15px;
+	border: 1px solid var(--cor-destaque);
+	box-shadow: 0 10px 20px var(--cor-sombra);
+	display: flex;
+	flex-direction: column;
+	width: fit-content; /* Largura se ajusta ao conteúdo */
+	min-height: 600px;
+	gap: 15px; /* Espaçamento entre os elementos filhos */
+}
+
+.campo-dado {
+	display: flex;
+	flex-direction: column;
+	height: 50px;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.campo-dado label {
+	margin-bottom: 5px;
+}
+
+.campo-dado input {
+	padding: 4px;
+	background: #d3d3d3;
+	border: 1px solid var(--cor-destaque);
+	border-radius: 4px;
+	width: 300px;
+}
+
+/* Adicionado para distribuir os campos de formulário uniformemente */
+.form-fields {
+	display: flex;
+	flex-direction: column;
+	gap: 10px; /* Espaçamento entre os campos do formulário */
+}
+
+.container-botoes {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px; /* Adiciona um espaçamento acima dos botões */
+}
+
+.container-botoes-index {
+	display: flex;
+	justify-content: space-between;
+	margin: 30px 0 0 10px;
+	max-width: 310px; /* Limita a largura total do container de botões */
+}
+
+/* Estilos base comuns para todos os botões */
+.botao-salvar,
+.botao-visualizar,
+.botao-voltar,
+.botao-analise,
+.botao-excluir {
+	background-color: var(--cor-fundo);
+	color: var(--cor-destaque);
+	font-size: 16px;
+	border: 1px solid var(--cor-destaque);
+	border-radius: 4px;
+	cursor: pointer;
+	width: 100px;
+	padding: 8px;
+	box-shadow:  0 10px 20px var(--cor-sombra);
+	transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+}
+
+/* Estilo para o botão de excluir na tabela */
+.botao-excluir {
+	color: var(--cor-excluir);
+	border-color: var(--cor-excluir);
+}
+
+/* Efeito hover para os botões */
+.botao-salvar:hover,
+.botao-visualizar:hover,
+.botao-voltar:hover,
+.botao-analise:hover {
+	background-color: #2f4f4f;
+	transform: translateY(-1px);
+}
+
+.botao-excluir:hover {
+	background-color: rgba(213, 128, 128, 0.184);
+	transform: translateY(-1px);
+}
+
+/* Novo container para agrupar os gráficos */
+.graficos-wrapper {
+	flex-grow: 1; /* Faz este wrapper crescer e ocupar o espaço */
+	overflow-y: auto; /* Adiciona rolagem se os gráficos não couberem na altura */
+	display: flex;
+	flex-direction: column;
+	min-height: 0; /* Correção para flexbox em alguns navegadores */
+	gap: 20px; /* Espaçamento entre os gráficos */
+}
+
+.grafico-container {
+	background-color: #2c2c2c;
+	padding: 20px;
+	border-radius: 8px;
+	width: 100%;
+}
+
+.container-resumo h2,
+.container-analise h2 {
+    font-size: 1.5em; /* Padroniza o tamanho do título com os outros H2s */
+	text-align: center;
+}
+
+/* Contêiner para o cabeçalho estático */
+#cabecalho-tabela {
+	font-size: 14px; /* Reduz um pouco a fonte para melhor encaixe */
+	padding-right: 12px; /* Compensa o espaço da barra de rolagem que aparecerá no corpo */
+}
+
+/* Novo container que agrupa o cabeçalho e o corpo da tabela */
+.tabela-wrapper {
+	flex-grow: 1; /* Faz este container crescer para ocupar o espaço disponível */
+	display: flex;
+	flex-direction: column;
+	overflow: hidden; /* Garante que o conteúdo não vaze */
+	margin-bottom: 20px; /* Adiciona um espaço antes dos botões */
+}
+
+/* Contêiner do corpo da tabela com barra de rolagem */
+#corpo-tabela-container {
+	overflow-y: auto; /* Adiciona a barra de rolagem vertical apenas quando necessário */
+}
+
+table {
+    width: 100%;
+    table-layout: fixed; /* Essencial para alinhar colunas entre tabelas separadas */
+    border-collapse: collapse; /* Sombra mais sutil para a tabela */
+}
+
+th, td {
+    border: 1px solid var(--cor-destaque);
+    padding: 8px;
+    text-align: left;
+    overflow-wrap: break-word; /* Garante que o texto quebre para não estourar a célula */
+}
+
+th {
+    color: var(--cor-destaque);
+	text-shadow: none;
+}
+
+td {
+	color: var(--cor-texto-principal);
+	text-shadow: none;
+}
+
+/* Estilo para a linha da tabela quando o mouse passa por cima */
+tbody tr:hover {
+	background-color: #3a3a3a; /* Um cinza um pouco mais claro para indicar interatividade */
+	cursor: pointer;
+}
+
+/* Estilo para a linha da tabela que está selecionada */
+tbody tr.selected {
+	background-color: #004040; /* Um tom de ciano escuro para a seleção */
+	color: var(--cor-texto-principal);
+}
+
+footer {
+	color: var(--cor-destaque);
+	font-size: 15px;
+	margin-top: auto; /* Empurra o rodapé para o final do espaço disponível */
+	padding: 1px;
+	font-family: 'Times New Roman', serif;
+}
+
+/* Remove as setas dos inputs de número  */
+/* Para Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Apenas para o Firefox */
+/*
+input[type="number"] {
+	-moz-appearance: textfield;
+} */
+
+/* --- Estilização da Barra de Rolagem --- */
+
+/* Para navegadores baseados em WebKit (Chrome, Safari, Edge, etc.) */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+    background: #2c2c2c; /* Cor de fundo da trilha, um pouco mais clara que o body */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--cor-destaque); /* Cor da alça (thumb) */
+    border-radius: 10px; /* Bordas arredondadas na alça */
+    border: 2px solid #2c2c2c; /* Cria uma "borda" usando a cor da trilha */
+}
+
+/* Para Firefox */
+* {
+    scrollbar-width: thin; /* Deixa a barra mais fina */
+    scrollbar-color: var(--cor-destaque) #2c2c2c; /* Cor da alça e cor da trilha */
+}

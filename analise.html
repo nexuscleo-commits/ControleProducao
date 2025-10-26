@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Produção</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container-analise">
+        <div class="cabecalho">
+            <h2>ANÁLISE GRÁFICA DA PRODUÇÃO</h2>
+        </div>
+
+        <div class="graficos-wrapper"> <!-- Novo wrapper para os gráficos -->
+            <div class="grafico-container">
+                <canvas id="graficoProducaoDia"></canvas>
+            </div>
+
+            <div class="grafico-container">
+                <canvas id="graficoProducaoOperador"></canvas>
+            </div>
+
+            <div class="grafico-container">
+                <canvas id="graficoProducaoPeca"></canvas>
+            </div>
+
+            <div class="grafico-container">
+                <canvas id="graficoProducaoMaquina"></canvas>
+            </div>
+        </div>
+
+        <div class="container-botoes" style="justify-content: center;">
+            <button onclick="window.location.href='resumo.html'" class="botao-voltar">Voltar</button>
+        </div>
+    </div>
+
+    <!-- Importação da biblioteca Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="analise.js"></script>
+
+    <footer>
+        &copy; NexusCleo 2025
+    </footer>
+</body>
+</html>

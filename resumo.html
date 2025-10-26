@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Produção CNC</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- Importação dos Ícones do Google Fonts (Material Symbols) -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    </head>
+
+    <body>
+        <div class="container-resumo">
+            <h2>DADOS DE PRODUÇÃO SALVOS</h2>
+            <!-- Novo container para agrupar a tabela e a rolagem -->
+            <div class="tabela-wrapper">
+                <div id="cabecalho-tabela">
+                    <!-- O cabeçalho da tabela será inserido aqui -->
+                </div>
+                <div id="corpo-tabela-container">
+                    <!-- A tabela será inserida aqui pelo JavaScript -->
+                </div>
+            </div>
+			<div class="container-botoes">
+				<button onclick="window.location.href='index.html'" class="botao-voltar">Voltar</button>				
+				<button onclick="window.location.href='analise.html'" class="botao-analise">Gráficos</button>
+				<button class="botao-excluir">Excluir</button>
+			</div>
+        </div>
+
+        <script type="module" src="resumo.js"></script>
+
+		<footer>
+			&copy; NexusCleo 2025
+		</footer>
+    </body>
+</html>
