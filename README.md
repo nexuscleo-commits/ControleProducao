@@ -37,13 +37,15 @@ Como este é um projeto puramente front-end e não requer um servidor, você pod
 
 1.  **Clique no link abaixo:**
     Para abrir a aplicação deireto no seu navegador clique no link abaixo.
+    
     https://nexuscleo-commits.github.io/ControleProducao/index.html
 
-2.  **Clone o repositório para sua máquina local:**
+3.  **Clone o repositório para sua máquina local:**
     Para salvar uma cópia do projeto em seu computador clique no link abaixo.
+    
     https://github.com/nexuscleo-commits/ControleProducao/archive/refs/heads/main.zip
 
-3.  **Abra o arquivo `index.html` no seu navegador de preferência.**
+5.  **Abra o arquivo `index.html` no seu navegador de preferência.**
 
     Pronto! A aplicação estará funcionando e você já pode começar a registrar os dados de produção.
 
