@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const botaoSalvar = document.querySelector('.botao-salvar');
     const botaoVisualizar = document.querySelector('.botao-visualizar');
 
+    const copyrightSpan = document.getElementById('copyright');
+    copyrightSpan.innerHTML += `${new Date().getFullYear()} NexusCleo.`;
+
     if (botaoSalvar) {
         botaoSalvar.addEventListener('click', (event) => {
             event.preventDefault(); // Previne o comportamento padrão do botão
