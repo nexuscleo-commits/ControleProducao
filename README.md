@@ -77,4 +77,4 @@ Como este é um projeto puramente front-end e não requer um servidor, você pod
 
 ---
 
-*Desenvolvido por &copy; NexusCleo 2025*
+*Desenvolvido por &copy;NexusCleo 2025*
