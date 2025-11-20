@@ -38,12 +38,12 @@ Como este é um projeto puramente front-end e não requer um servidor, você pod
 1.  **Clique no link abaixo:**
     Para abrir a aplicação deireto no seu navegador clique no link abaixo.
     
-    https://nexuscleo-commits.github.io/ControleProducao/index.html
+    https://nexuscleo.github.io/controle-producao/index.html
 
 3.  **Clone o repositório para sua máquina local:**
     Para salvar uma cópia do projeto em seu computador clique no link abaixo.
     
-    https://github.com/nexuscleo-commits/ControleProducao/archive/refs/heads/main.zip
+    https://github.com/nexuscleo/controle-producao/archive/refs/heads/main.zip
 
 5.  **Abra o arquivo `index.html` no seu navegador de preferência.**
 
@@ -77,4 +77,5 @@ Como este é um projeto puramente front-end e não requer um servidor, você pod
 
 ---
 
-*Desenvolvido por &copy;2025 NexusCleo.*
+*Desenvolvido por Cleomar da Silva*
+*&copy;2025 NexusCleo.*
